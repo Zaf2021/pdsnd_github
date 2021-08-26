@@ -9,6 +9,8 @@ import time
 import pandas as pd
 import numpy as np
 
+# This is where we define the city data
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -33,7 +35,11 @@ def get_filters():
         else:
             break
 
-    # get user input for month (all, january, february, ... , june)
+    """
+    get user input for month (all, january, february, ... , june)
+	Making sure you put the response options within the question.
+    """
+
     while True:
         month=str(input('\033[1;34m Do you want to filter by month? If yes, then type out the month. \n(January, February, March, April, May, June), If not, type in all\n')).title()
         if month not in months:
